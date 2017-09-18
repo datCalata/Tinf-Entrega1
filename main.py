@@ -126,8 +126,8 @@ i
 '''
 print("Distribucion de probabilidad P(c,v | N)")
 list_prob_cv_n= []
-for c in range(0, list_prob.shape[2]):
-    list_prob_cv_n.append(list_prob[0:,0:,n]/prob_n[n])
+for n in range(0, 3):
+    list_prob_cv_n.append(list_prob[0: ,0: ,n]/prob_n[n])
 print("Distribucion de probabilidad P(n,v | c)")
 print_tables(list_prob_cv_n)
 #Apartado I
@@ -161,4 +161,4 @@ i_n_v_c = h_nc - h_c - h_n_c_v
 i_c_v_n = h_nc - h_n - h_c_n_v
 print("La informacion mutua I(N;C/V): {0}".format(i_n_c_v))
 print("La informacion mutua I(N;V/C): {0}".format(i_n_v_c))
-print("La informacion mutua I(C;V/N): {0}".format(i_n_c_v))
+print("La informacion mutua I(C;V/N): {0}".format(i_c_v_n))
